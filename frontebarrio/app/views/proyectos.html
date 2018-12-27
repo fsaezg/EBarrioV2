@@ -1,0 +1,30 @@
+<div ng-include="proyectos.menutemplate.url"></div>
+<!-- <p ng-show="$parent.settings.success">{{$parent.settings.success}}</p> -->
+  <div ng-controller="ViewCtrl" class="container">
+  <div class="row">
+  <div class="col s4 m6">
+     <div ng-repeat="p in proyecto" class="card small">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{p.portada}}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{p.nombre}}<i class="material-icons right">more_vert</i></span><a href="/#!/ubicacion">Ubicación Proyectos</a>
+          <a href="/#!/destallesproyecto">Detalles Proyecto</a> 
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Información<i class="material-icons right">close</i></span>
+          <li type="circle">Responsable: {{p.razonsocial}}</li>
+           <li type="circle">Rut: {{p.rutsocial}}</li>
+           <li type="circle">Tipo organizacion: {{p.organizacion}}</li>
+           <li type="circle">Nombre proyecto: {{p.nombre}}</li>
+           <li type="circle">Costo para usuarios: {{p.tarifa}}</li>
+           <li type="circle">Tipo de beneficiarios: {{p.destinatario}}</li>
+           <li type="circle">Beneficiarios directos: {{p.beneficiariodirecto}}</li>
+           <li type="circle">Beneficiarios indirectos: {{p.beneficiarioindirecto}}</li>
+           <li type="circle">Duracion proyecto: {{p.duracion}}</li>
+           <li type="circle">Region proyecto: {{p.region}}</li>
+           
+        </div>
+      </div>
+      </div>
+<p>This is the proyectos view.</p>
