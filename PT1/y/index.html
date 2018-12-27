@@ -1,0 +1,31 @@
+<!doctype html> <html> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.f3cd9730.css"> <link rel="stylesheet" href="styles/main.75b9d03e.css"> <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script> <script>// Initialize Firebase</script> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> </head> <body ng-app="plataformaApp"> <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Add your site or application content here --> <div id="fb-root"></div> <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script> <div ng-view=""></div> <footer class="page-footer indigo"> <div class="container"> <div class="row"> <div class="col l6 s12"> <h5 class="white-text">Footer Content</h5> <p class="grey-text text-lighten-4">Proyecto elaborado por Mauricio Arancibia, estudiante de ingeniería en computación e informática</p> </div> <div class="col l4 offset-l2 s12"> <h5 class="white-text">Links de interés</h5> <ul> <li><a class="grey-text text-lighten-3" href="http://vinculacion.unab.cl" target="_blank">Dirección General de Vinculación con el Medio</a></li> <li><a class="grey-text text-lighten-3" href="http://www.unab.cl" target="_blank">Universidad Andres Bello</a></li> <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> --> </ul> </div> </div> </div> <div class="footer-copyright"> <div class="container"> © 2017 Copyright Mauricio Arancibia Soto <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> --> </div> </div> </footer> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');</script> <!--  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script> --> <!-- <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA71DVboCSlOzIoy6qo4pMbeMU8JpGvXZw",
+        authDomain: "ebarrio-c0814.firebaseapp.com",
+        databaseURL: "https://ebarrio-c0814.firebaseio.com",
+        projectId: "ebarrio-c0814",
+        storageBucket: "ebarrio-c0814.appspot.com",
+        messagingSenderId: "620933575940"
+      };
+      firebase.initializeApp(config);
+    </script> --> <script src="scripts/vendor.a4600f9b.js"></script> <script src="scripts/scripts.349bbea7.js"></script> </body> </html>

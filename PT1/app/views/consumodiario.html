@@ -1,0 +1,64 @@
+<div ng-include="consumodiario.menutemplate.url"></div>
+<div class="row">
+
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+     google.charts.load('current', {packages: ['corechart','bar']});     
+   </script>
+
+<h5>Consumo Participantes</h5>
+<div class="col s3" id="containerGeneral" style="width: 450px; height: 400px; margin: 0 auto"></div>
+<h5>Mi Consumo</h5>
+<div class="col s3" id="container" style="width: 450px; height: 400px; margin: 0 auto"></div>
+
+<div class="col s3">
+  <!-- <h5>Cantidad de participantes</h5>
+  <input type="text" value="100" class="dial"> -->
+  <h5>Participantes sobre meta de consumo</h5>
+  <input type="text" value="50" class="line">
+  <h5>Participante bajo meta de consumo</h5>
+  <input type="text" value="50" class="dial">
+</div>
+</div>
+<button ng-click=""></button>
+<script language="JavaScript">
+function drawChartGeneral() {
+   // Define the chart to be drawn.
+   var data = google.visualization.arrayToDataTable([
+      ['Mes', 'Mauricio Arancibia', 'Romina torres'],
+    ['Julio',  190,      250],
+      ['Agosto',  230,      270],
+      ['Septiembre',  180,      245]
+      ]);
+
+   var options = {
+      title: 'Population (in millions)'
+   };  
+
+   // Instantiate and draw the chart.
+   var chart = new google.charts.Bar(document.getElementById('containerGeneral'));
+   chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChartGeneral);
+</script>
+
+<script language="JavaScript">
+function drawChartMonth() {
+   // Define the chart to be drawn.
+   var data = google.visualization.arrayToDataTable([
+      ['Mes', 'Mauricio Arancibia'],
+    ['Julio',  190],
+      ['Agosto',  230],
+      ['Septiembre',  180]
+      ]);
+
+   var options = {
+      title: 'Population (in millions)'
+   };  
+
+   // Instantiate and draw the chart.
+   var chart = new google.charts.Bar(document.getElementById('container'));
+   chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChartMonth);
+</script>

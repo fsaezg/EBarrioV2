@@ -1,0 +1,44 @@
+<div ng-include="metas.menutemplate.url"></div>
+<div>
+	<table class="striped">
+		<tr>
+			<th>ID Proyecto</th>
+			<th>Año</th>
+			<th>Mes</th>
+			<th>Consumo Actual</th>
+			<th>Meta Consumo</th>
+			<th>Porcentaje Ahorrado</th>
+			<th>Tipo de Proyecto</th>
+			<!-- <th>Total gasto mensual</th> -->
+		</tr>
+		
+		<tr ng-repeat="post in proyectos">
+			<td>{{post.id}}</td>
+			<td>{{post.anio}}</td>
+			<td>{{post.mes}}</td>
+			<td>{{post.consumo_actual}}</td>
+			<td>{{post.meta_consumo}}</td>
+			<td>{{post.ahorro}}</td>
+			<td>{{post.tipo}}</td>
+			<!-- <td>{{post.costokwh}}</td> -->
+		</tr>
+	</table>
+</div>
+<div ng-controller="MetasCtrl as ctrl">
+	<div donut-chart="" donut-data="ctrl.chartData" donut-colors="ctrl.chartColors" donut-formatter="'currency'"></div>
+    <div donut-chart="" donut-data="ctrl.chartData" donut-colors="ctrl.chartColors" donut-formatter="ctrl.myFormatter"></div>
+</div>
+<!-- <h3>Agregar Proyectos</h3> -->
+<!-- <div class="row">
+	<div class="input-field col s6">
+		<form>
+			<input id="id" type="text" ng-model="nuevoProyecto.id">
+			<label for= "id">Identificador Proyecto</label>
+			<input id="anio" type="text" ng-model="nuevoProyecto.anio" class="validate">
+			<label for="anio">Año Proyecto</label>
+			<input id="mes" type= "text" ng-model= "nuevoProyecto.mes" class="validate">
+			<label for="mes">Mes Proyecto</label>
+			<button ng-click="agregarProyecto()"> </button>
+		</form>	
+	</div>
+</div> -->

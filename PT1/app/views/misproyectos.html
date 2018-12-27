@@ -1,0 +1,36 @@
+<div ng-include="misproyectos.menutemplate.url"></div>
+<form>
+    <!-- <div class="input-field col s6">
+    <input type="text" ng-model="rut" name="rut">
+    <label for="rut">Rut</label>
+  </div> -->
+    <input class="btn waves-effect waves-yellow red" type="button" value="Ver mis proyectos" ng-click="importar()">
+</form>
+<table class="bordered">
+    <thead>
+        <tr>
+            <th>ID Proyecto</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Region</th>
+            <th>Ciudad</th>
+            <th>Estado</th>
+            <th>Rut Responsable</th>
+            <th>Requisito</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="p in proyecto">
+            <td>{{p.idproyecto}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.descripcion}}</td>
+            <td>{{p.region}}</td>
+            <td>{{p.ciudad}}</td>
+            <td>{{p.estado}}</td>
+            <td>{{p.rut_user}}</td>
+            <td>{{p.requisito}}</td>
+        </tr>
+    </tbody>
+</table>
+

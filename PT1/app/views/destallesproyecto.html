@@ -1,0 +1,63 @@
+<div ng-include="destallesproyecto.menutemplate.url"></div>
+<h2>{{proyecto.nombre}}</h2>
+<div class="row"> 
+<div class="col s4">
+	<h5>Participantes</h5>
+<ul ng-repeat="p in participante" class="collection">
+      <!-- <li style="color:red;" class="collection-item">Este mes no se cumplio con la meta de consumo</li>
+      <li style="color:red;" class="collection-item">{{p.usuario_idusuario}}</li> -->
+      <li style="color:green;" class="collection-item">Nombre: {{p.nombre}}</li>
+      <li style="color:green;" class="collection-item">Apellido: {{p.apellido}}</li>
+    </ul>
+</div>
+
+	<div  class="col s4">
+    <h5 >Estado del proyecto</h5>
+    <p>{{proyecto.estado}}</p>
+    <!-- <input type="text" value="55" class="dial" data-width="200" data-thickness=".32" data-fgColor="#008BE8" data-bgColor="#EEEEEE" data-cursor=false data-displayInput="true" data-readOnly=true > -->
+    <h5>Porcentaje de avance del proyecto</h5>
+    <input ng-controller="DestallesproyectoCtrl" type="text" value="67" class="dial">
+  
+</div>
+<div ng-controller="DestallesproyectoCtrl" class= "col s4"><div class="map-container">
+	<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/u/0/embed?mid=1Gv3T4EK3dBZIzPsG_xqjlSbjaA0" width="100%" height="480"></iframe>
+</div>
+
+
+<!-- <div ng-repeat="item in valor" class= "col s4">
+	<p ng-init="sumar({{item.kwh}})">{{contador}}</p>
+</div> -->
+
+ <!--  <title>Google Charts Tutorial</title>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+     google.charts.load('current', {packages: ['corechart']});     
+   </script>
+</head>
+<body>
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+<script language="JavaScript">
+function drawChart() {
+   // Define the chart to be drawn.
+   var data = google.visualization.arrayToDataTable([
+      ['Year', 'Asia'],
+	  ['2012',  900],
+      ['2013',  1000],
+      ['2014',  1170],
+      ['2015',  1250],
+      ['2016',  1530]
+      ]);
+
+   var options = {
+      title: 'Population (in millions)'	  
+   }; 
+
+   // Instantiate and draw the chart.
+   var chart = new google.visualization.BarChart(document.getElementById('container'));
+   chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChart);
+</script>
+
+ -->
+</div>

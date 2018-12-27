@@ -1,0 +1,21 @@
+<div ng-include="modificarvalores.menutemplate.url"></div>
+<form class="col s12">
+    <div class="row">
+      <div class="input-field col s4">
+        <input type="text" ng-model="cargofijo" name="cargofijo">
+        <label for="cargofijo">Valor Cargo Fijo</label>
+      </div>
+      <div class="input-field col s4">
+        <input type="text" ng-model="valorkwh" name="valorkwh">
+        <label for="valorkwh">Valor KWh</label>
+      </div>
+      <div class="input-field col s4">
+        <input type="text" ng-model="transporte" name="transporte">
+        <label for="transporte">Valor Trasporte Energía</label>
+      </div>
+      <div class="input col s6">
+      <input class="btn waves-effect waves-yellow red" type="button" value="Modificar" ng-click="update()">
+      </div>
+    </div>
+  </form>
+

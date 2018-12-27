@@ -1,0 +1,28 @@
+<div ng-include="grafico.menutemplate.url"></div>
+<div >
+	<table class="striped">
+		<tr>
+			<th>ID Dispositivo</th>
+			<th>Año</th>
+			<th>Mes</th>
+			<th>ID Usuario</th>
+			<th>Nombre</th>
+			<th>Kwh Consumido</th>
+			<th>Total gasto mensual</th>
+		</tr>
+		
+		<tr ng-repeat="post in posts">
+			<td>{{post._id}}</td>
+			<td>{{post.anio}}</td>
+			<td>{{post.mes}}</td>
+			<td>{{post.id_usuario}}</td>
+			<td>{{post.nombre}}</td>
+			<td>{{post.kwh}}</td>
+			<td>{{post.costokwh}}</td>
+		</tr>
+	</table>
+
+	<div > 
+		<canvas width=300 hight=300 id="base" class="chart-bar" chart-data="data" chart-labels="labels" chart-colors="colors"
+		chart-dataset-override="datasetOverride"></canvas>
+	</div>
